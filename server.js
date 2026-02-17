@@ -13,6 +13,10 @@ const { sendMail } = require('./mailer');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+console.log("HOST:", process.env.DB_HOST);
+console.log("USER:", process.env.DB_USER);
+console.log("PORT:", process.env.DB_PORT);
+
 // View engine
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
